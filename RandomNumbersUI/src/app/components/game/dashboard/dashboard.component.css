@@ -1,0 +1,193 @@
+html,
+body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dashboard-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+    width: 100%;
+}
+
+.auth-buttons {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    gap: 10px;
+}
+
+.login-button {
+    background-color: white;
+    color: black;
+    border: 2px solid white;
+    border-radius: 5px;
+    width: 100px;
+    height: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-button:hover {
+    background-color: lightblue;
+}
+
+.register-button {
+    background-color: blue;
+    color: white;
+    border: 2px solid blue;
+    border-radius: 5px;
+    width: 100px;
+    height: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.register-button:hover {
+    background-color: darkblue;
+}
+
+.logout-button {
+    background-color: white;
+    color: black;
+    border: 2px solid white;
+    border-radius: 5px;
+    width: 100px;
+    height: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logout-button:hover {
+    background-color: lightblue;
+}
+
+.active-matches,
+.finished-matches {
+    width: 100%;
+    max-width: 600px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.active-matches h3,
+.finished-matches h3 {
+    text-align: center;
+    color: #333;
+}
+
+.match {
+    border: 1px solid #9AA9A9;
+    border-radius: 25px;
+    padding: 6px 0;
+    margin-bottom: 10px;
+    width: 50%;
+}
+
+.play-button {
+    position: relative;
+    background-color: #A5D9D9;
+    border: none;
+    border-radius: 15px;
+    padding: 6px 0;
+    font-size: 36px;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.play-button:hover {
+    background-color: #80deea;
+}
+
+.timer {
+    position: absolute;
+    bottom: 5px;
+    right: 10px;
+    font-size: 12px;
+    color: white;
+}
+
+.match.finished {
+    background-color: #90a4ae;
+    border-radius: 20px;
+    padding: 5px 0px 5px 10px;
+    color: white;
+}
+
+.match-id {
+    font-size: 12px;
+    color: darkred;
+    margin: 0;
+}
+
+.match-id span {
+    font-size: 12px;
+    color: white;
+    margin: 0;
+}
+
+.match-end {
+    font-size: 12px;
+    color: darkred;
+    margin: 0;
+}
+
+.match-end span {
+    font-size: 12px;
+    color: white;
+    margin: 0;
+}
+
+.match-winner {
+    font-size: 13px;
+    color: darkred;
+    margin: 0;
+}
+
+.match-winner span {
+    font-size: 12px;
+    color: white;
+    margin: 0;
+}
+
+.refresh-button {
+    position: relative;
+    background-color: #850E0E;
+    border: none;
+    border-radius: 15px;
+    padding: 6px 0;
+    font-size: 36px;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    margin-bottom: 10px;
+    text-align: center;
+}

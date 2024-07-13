@@ -1,0 +1,37 @@
+<div>
+    <div *ngIf="!isLoggedIn" class="auth-buttons">
+        <button class="login-button" (click)="login()">Sign In</button>
+        <button class="register-button" (click)="register()">Sign Up</button>
+    </div>
+    <div *ngIf="isLoggedIn" class="auth-buttons">
+        <button class="logout-button" (click)="logout()">Sign Out</button>
+    </div>
+
+    <div class="dashboard-container">
+        <div class="active-matches">
+            <h3>ACTIVE GAMES</h3>
+            <ng-container *ngFor="let match of matches">
+              <button class="play-button" *ngIf="!match.isDone" (click)="playMatch(match)">
+                {{ match.currentUserScore > 0 ? match.currentUserScore : 'PLAY NOW' }}
+                <span class="timer">{{ formatExpiryTimestamp(match.expiryTimestamp) }}</span>
+              </button>
+            </ng-container>
+          </div>
+
+        <div class="finished-matches">
+            <h3>LAST GAMES</h3>
+            <ng-container *ngFor="let match of matches">
+                <div *ngIf="match.isDone" class="match finished">
+                    <p class="match-id">Game Id: <span>{{ match.id }}</span></p>
+                    <p class="match-end">End Date: <span>{{ match.endDate | date:'dd.MM.yyyy HH:mm' }}</span></p>
+                    <br />
+                    <p class="match-winner">Winner: <span>{{ match.winnerName }}</span></p>
+                </div>
+            </ng-container>
+        </div>
+
+        <button [disabled]="false" class="refresh-button" (click)="loadMatches()">
+            Refresh Results
+        </button>
+    </div>
+</div>

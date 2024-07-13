@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <title>RandomNumbers</title>
+    <script>
+        function updatePingResult(data) {
+            console.log(data);
+            $('#pingWithoutAuthResult').val(data);
+        }
+
+        function updatePingWithAuthResult(data) {
+            console.log(data);
+            $('#pingWithAuthResult').val(data);
+        }
+
+        function getPing() {
+            $.ajax({
+                type: "GET",
+                url: "/api/ping",
+                success: updatePingResult
+            })
+        }
+
+        function getPingWithAuth() {
+            $.ajax({
+                type: "GET",
+                url: "/api/ping/with-auth",
+                headers: {
+                    "Authorization": "Basic " + btoa("User1:Password1")
+                },
+                success: updatePingWithAuthResult
+            })
+        }
+    </script>
+</head>
+<body>
+    <form class="form-inline container" style="padding-top: 30px">
+        <div class="form-group mb-2 row">
+            <label for="pingWithoutAuthLabel" class="sr-only">Ping Without Auth</label>
+            <input type="text" readonly class="form-control-plaintext" id="pingWithoutAuthLabel" value="Ping Without Auth">
+        </div>
+        <div class="form-group mx-sm-2 mb-2 row">
+            <label for="pingWithoutAuthResult" class="sr-only">Result</label>
+            <input type="text" class="form-control" id="pingWithoutAuthResult" placeholder="Result" readonly style="width:500px">
+        </div>
+        <button type="submit" class="btn btn-primary mb-6" onclick="getPing(); return false;">Call API</button>
+    </form>
+    <form class="form-inline container" style="padding-top: 10px">
+        <div class="form-group mb-2 row">
+            <label for="pingWithAuthLabel" class="sr-only">Ping With Auth</label>
+            <input type="text" readonly class="form-control-plaintext" id="pingWithAuthLabel" value="Ping With Auth">
+        </div>
+        <div class="form-group mx-sm-2 mb-2 row">
+            <label for="pingWithAuthResult" class="sr-only">Result</label>
+            <input type="text" class="form-control" id="pingWithAuthResult" placeholder="Result" readonly style="width:500px">
+        </div>
+        <button type="submit" class="btn btn-primary mb-6" onclick="getPingWithAuth(); return false;">Call API</button>
+    </form>
+
+</body>
+</html>

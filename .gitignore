@@ -1,0 +1,186 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+# Build results
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+bld/
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+[Ll]ogs/
+
+# User-specific files
+*.rsuser
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Mono Auto Generated Files
+mono_crash.*
+
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# Folder config file
+Desktop.ini
+$RECYCLE.BIN/
+
+# VS Code directories
+.vscode/
+.vscode-test/
+
+# Rider directories
+.idea/
+
+# Rider files
+*.sln.iml
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# Npm packages
+node_modules/
+
+# Client-side libraries
+lib/
+
+# Temporary files
+*.tmp
+*.temp
+
+# Others
+*.log
+*.vs/
+.vscode/
+*.tsbuildinfo
+
+# Visual Studio Code
+.vscode/*
+
+# Visual Studio for Mac
+.vscode/
+.vscode-test/
+
+# ASP.NET Scaffolding
+ScaffoldingReadMe.txt
+
+# Entity Framework Migrations
+Migrations/
+
+# DotNet compile generated files
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# ASP.NET 5
+project.json
+
+# Azure DevOps
+.vs
+
+# JetBrains Rider
+.idea/
+*.sln.iml
+.idea/*
+
+# Docker
+*.container.*
+
+
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Compiled output
+dist/
+tmp/
+out-tsc/
+build/
+
+# Dependency directories
+jspm_packages/
+
+# Optional npm cache directory
+.npm
+
+# Optional REPL history
+.node_repl_history
+
+# Output of 'npm pack'
+*.tgz
+
+# Yarn Integrity file
+.yarn-integrity
+
+# dotenv environment variables file
+.env
+
+# Angular specific files
+.angular
+.angular-cli.json
+.angular-build/
+.angular-logs/
+.angular_cache/
+
+# IDEs and editors
+.vscode/
+.idea/
+.DS_Store
+*.sublime-project
+*.sublime-workspace
+
+# Logs
+logs
+*.log
+
+# Coverage directory used by tools like istanbul
+coverage/
+
+# System files
+Thumbs.db
+Desktop.ini
+
+# Mac specific files
+.DS_Store
+
+# Optional npm cache directory
+.npm/
+
+# Optional eslint cache
+.eslintcache
+
+# Optional stylelint cache
+.stylelintcache
+
+# Optional jest cache
+jest/
+
+# Optional flow cache
+.flowconfig
+
+# SASS cache
+.sass-cache/
+
+# Optional IDE configurations
+.idea/
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+.tune/
+
+# Optional VS Code configurations
+.vscode/*
